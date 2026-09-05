@@ -358,6 +358,33 @@
     .hero-grid{ padding-bottom: 50px; }
     .pillars{ grid-template-columns: 1fr; }
   }
+  /* ---------- INSTRUCTORES ---------- */
+  .instructors-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .instructor-card{ background: var(--bg-card); border-top: 3px solid var(--green); overflow:hidden; }
+  .instructor-photo-wrap{ position:relative; aspect-ratio: 1/1; overflow:hidden; }
+  .instructor-photo-wrap img{ width:100%; height:100%; object-fit: cover; display:block; }
+  .instructor-photo-wrap::after{
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, transparent 55%, rgba(13,15,12,0.85) 100%);
+    pointer-events:none;
+  }
+  .instructor-role-chip{
+    position:absolute; top:16px; left:16px;
+    font-family: var(--font-mono); font-size: 0.68rem; color: var(--green-bright);
+    background: rgba(8,9,10,0.75); border: 1px solid var(--border);
+    padding: 6px 12px; z-index:2;
+  }
+  .instructor-info{ padding: 22px 24px 26px; }
+  .instructor-name{
+    font-family: var(--font-impact); font-size: 1.5rem; font-weight: 400;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .instructor-tag{ font-family: var(--font-mono); font-size: 0.75rem; color: var(--green); margin-bottom: 12px; }
+  .instructor-bio{ color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 860px){
+    .instructors-grid{ grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -365,7 +392,7 @@
 <header class="nav">
   <div class="nav-inner">
     <div class="logo"><span class="dot"></span>DE CERO A <span class="accent">TRADER</span></div>
-    <a href="#registro" class="nav-cta">Unirme a la lista</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUR6EXAwZmXKDFKUX9d8FibNDnP5pa7-Iv_u6yABPNPksdJQ/viewform" target="_blank" rel="noopener" class="nav-cta">Unirme a la lista</a>
   </div>
 </header>
 
@@ -396,7 +423,7 @@
       </div>
 
       <div class="hero-ctas">
-        <a href="#registro" class="btn-primary">Unirme a la lista de espera</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUR6EXAwZmXKDFKUX9d8FibNDnP5pa7-Iv_u6yABPNPksdJQ/viewform" target="_blank" rel="noopener" class="btn-primary">Unirme a la lista de espera</a>
         <span class="urgency-line">5 días intensivos. Cupos limitados por cohorte.</span>
       </div>
     </div>
@@ -677,6 +704,40 @@
   </div>
 </section>
 
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">TUS INSTRUCTORES</span>
+      <h2 class="section-title">Quiénes te acompañan</h2>
+      <p class="section-desc">Las 5 sesiones las damos nosotros mismos, en vivo, no un video pregrabado.</p>
+    </div>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-photo-wrap">
+          <span class="instructor-role-chip">INSTRUCTOR</span>
+          <img src="assets/instructor-1.jpg" alt="Instructor del bootcamp">
+        </div>
+        <div class="instructor-info">
+          <div class="instructor-name">[Tu nombre]</div>
+          <div class="instructor-tag">[Tu rol o especialidad]</div>
+          <p class="instructor-bio">[Una línea corta sobre tu experiencia o enfoque.]</p>
+        </div>
+      </div>
+      <div class="instructor-card">
+        <div class="instructor-photo-wrap">
+          <span class="instructor-role-chip">INSTRUCTOR</span>
+          <img src="assets/instructor-2.jpg" alt="Instructor del bootcamp">
+        </div>
+        <div class="instructor-info">
+          <div class="instructor-name">[Tu nombre]</div>
+          <div class="instructor-tag">[Tu rol o especialidad]</div>
+          <p class="instructor-bio">[Una línea corta sobre tu experiencia o enfoque.]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="precios">
   <div class="wrap">
     <div class="section-head center">
@@ -698,7 +759,7 @@
           <li>Acceso a la comunidad permanente</li>
           <li>Reto de 30 días post-bootcamp</li>
         </ul>
-        <a href="#registro" class="btn-primary price-btn">Reservar mi cupo</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUR6EXAwZmXKDFKUX9d8FibNDnP5pa7-Iv_u6yABPNPksdJQ/viewform" target="_blank" rel="noopener" class="btn-primary price-btn">Reservar mi cupo</a>
       </div>
       <div class="price-vip-note">
         <span class="vip-tag">VIP</span>
